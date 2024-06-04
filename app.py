@@ -56,7 +56,7 @@ def main():
             model, scaler = train_model(X, y)
             
             predicted_price = predict_price(model, scaler, year_to_predict)
-            st.success(f"The predicted price for section {section_id} in {year_to_predict} is: T{predicted_price:.2f}")
+            st.success(f"The predicted price for section {section_id} in {year_to_predict} is: {predicted_price:.2f}T")
         except Exception as e:
             st.error(str(e))
 
